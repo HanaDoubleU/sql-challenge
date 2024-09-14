@@ -10,16 +10,17 @@ dept_no varchar(4) pk
 dept_name varchar(18)
 
 dept_emp
--- # each employee and their corresponding department
+-- # each employee and their corresponding department(s)
 --
-emp_no int pk
+emp_no int
 dept_no varchar(4) fk >- departments.dept_no
 
 dept_manager
 -- # each manager among employees and their corresponding department
 --
 dept_no varchar(4) fk >- departments.dept_no
-emp_no int pk
+emp_no int
+id serial pk
 
 employees
 -- # each employee's personal information
