@@ -25,7 +25,8 @@ id serial pk
 employees
 -- # each employee's personal information
 --
-emp_no int pk
+id serial pk
+emp_no int
 emp_title_id varchar(5) fk >- titles.title_id
 birth_date varchar(10)
 first_name varchar(30)

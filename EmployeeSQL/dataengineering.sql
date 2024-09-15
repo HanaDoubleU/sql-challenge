@@ -40,6 +40,7 @@ drop table if exists dept_manager;
 
 -- creating table and columns for dept_manager
 -- source: schema.sql from tenth activity on tuesday
+-- source: xpert
 -- source: value_of_uniques_solution.sql
 create table dept_manager (
     dept_no varchar(4),
@@ -60,8 +61,10 @@ drop table if exists employees;
 
 -- creating table and columns for employees
 -- source: schema.sql from tenth activity on tuesday
+-- source: value_of_unique_solution.sql
 create table employees (
-    emp_no int primary key,
+    id serial primary key,
+    emp_no int,
     emp_title_id varchar(5),
     birth_date varchar(10),
     first_name varchar(30),
