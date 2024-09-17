@@ -5,7 +5,8 @@ dept_name varchar(18)
 
 dept_emp
 --
-emp_no int pk fk - employees.emp_no
+id serial pk
+emp_no int fk - employees.emp_no
 dept_no varchar(4) fk >- departments.dept_no
 
 dept_manager
