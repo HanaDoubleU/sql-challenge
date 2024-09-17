@@ -2,7 +2,7 @@
 ninth week's assignment
 
 # For data modeling,
-I made a tentative ERD. I'm calling it tentative because -- as I completed this assignment -- it went through several edits.
+I made a tentative ERD. I called it tentative because -- as I completed this assignment -- it went through several edits.
 
     The first edit was me changing the primary key from dept_no to emp_no in dept_manager since it did not occur to me that one department could have more than one manager. I realized my mistake after pgAdmin 4 would not accept dept_no as a primary key, and after consulting Xpert. Experiencing that hiccup made me take a moment to actually get to know the given data and really understand stand it before continuing with this challenge.
 
