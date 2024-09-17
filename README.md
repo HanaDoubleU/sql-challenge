@@ -8,14 +8,16 @@ I made a tentative ERD. I'm calling it tentative because -- as I completed this 
 
     The second edit was me adding a column (id serial primary key) to dept_manager since the third prompt for data analysis specifically asked for managers -- in addition to dept_no, dept_name, emp_no, last_name, and first_name -- to be listed.
 
-    The third, and last, edit was me adding a column (id serial primary key) to employees for the same reason upon addressing the sixth and seventh prompts, which were asking for which employee in employees to be listed.
+    The third, and last, edit was me adding a column (id serial primary key) to dept_emp because, though emp_no seemed to be the primary key at first glance, pgAdmin 4 did not accept it as one. In stead, it gave an error indicating that there was some redundancy within the values, so I made each row unique by adding "id serial primary key".
 
 # For data engineering,
 I used the same format for my schemata which we used in class to create the tables, and I imported the data through the provided csv.
     
     When I imported data for tables including the columns for id serial primary key, I was sure to remove that column from the tab called columns on pgAdmin before importing.
     
-    While I completed data modelling, I was able to meaningfully familiarize myself with the data, so -- during the process for data engineering -- I was able to choose which columns were primary keys by simply reviewing how they influenced each table.
+    While I completed the previous step of data modelling, I was able to meaningfully familiarize myself with the data, so -- during the process for data engineering -- I was able to choose which columns were primary keys by simply reviewing how they influenced each table. The same can be said regarding how I approached identifying foreign keys.
+
+    After identifying foreign keys, I adjusted the order in which my schemata was creating tables, since the foreign keys would need to be referencing existing tables.
 
 # For data analysis,
 I was able to use (1) the knowledge which I acquired in class and (2) resources with documentation on aggregate functions to finish this assignment.

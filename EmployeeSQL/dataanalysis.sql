@@ -13,7 +13,7 @@ where hire_date like '%1986';
 
 -- listing managers, dept_no, dept_name, emp_no, last_name, and first_name
 -- source: joining_bird_bands_solution.sql
-select dm.id as manager, dm.dept_no, dm.emp_no, e.last_name, e.first_name, d.dept_name
+select dm.id as "manager", dm.dept_no, dm.emp_no, e.last_name, e.first_name, d.dept_name
 from dept_manager as dm
 inner join employees as e on
 dm.emp_no=e.emp_no
@@ -39,7 +39,7 @@ last_name like 'B%';
 
 -- listing employees in sales, emp_no, last_name, and first_name of employees in sales
 -- source: subqueries_solution.sql
-select id as "which sales' employee from employees", emp_no, last_name, first_name
+select emp_no, last_name, first_name
 from employees
 where emp_no in
 (
@@ -55,8 +55,8 @@ where emp_no in
 
 -- listing employees in sales and development, emp_no, last_name, first_name, and dept_name
 -- source: joining_birds_bands_solution.sql
--- i figure that "or" would be a thing since "and" was a thing.
-select e.id as "which sales and development's employee from employees", e.emp_no, e.last_name, e.first_name, d.dept_name
+-- source: i figure that "or" would be a thing since "and" was a thing.
+select e.emp_no, e.last_name, e.first_name, d.dept_name
 from employees as e
 inner join dept_emp as de on
 e.emp_no=de.emp_no
